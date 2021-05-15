@@ -1,0 +1,35 @@
+.movie_card {
+    width: 250px;
+    margin: 20px 20px;
+    flex: none;
+}
+
+.like_icon, .dislike_icon, .delete_icon {
+    font-size: 1.2rem !important;
+}
+
+.movie_poster {
+    height: 250px;
+}
+
+.movie_name {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.category {
+    text-align: left;
+}
+
+.ratio_gauge {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.progress_bar {
+    width: 80%;
+    margin: 0 5px;
+}

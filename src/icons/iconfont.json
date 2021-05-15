@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7239701",
+      "name": "dislike",
+      "font_class": "dislike",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "7239705",
+      "name": "delete",
+      "font_class": "delete",
+      "unicode": "e727",
+      "unicode_decimal": 59175
+    },
+    {
+      "icon_id": "7239802",
+      "name": "like",
+      "font_class": "like",
+      "unicode": "e73b",
+      "unicode_decimal": 59195
+    }
+  ]
+}
