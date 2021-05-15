@@ -1,0 +1,11 @@
+.category_filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#category {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+}

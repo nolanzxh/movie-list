@@ -8,6 +8,7 @@ body, html, #root {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -17,4 +18,51 @@ body, html, #root {
   flex-direction: row;
   width: 100%;
   justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  width: 60%;
+  padding: 0;
+}
+
+.pagination a {
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: bold;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.pagination a:hover {
+  background-color: rgba(185, 179, 179, 0.12);
+}
+
+.paginationActive {
+  background-color: rgba(0, 0, 0, 0.12);
+  border-radius: 50%;
+}
+
+.paginationDisabled {
+  color: rgb(198, 197, 202);
+}
+
+.paginationDisabled a:hover {
+  cursor: default;
+  background-color: #f6f7ff !important;
+}
+
+.pagination_container{
+  display: flex;
+  align-items: center;
+}
+
+.perpage_container{
+  margin-left: 15px;
 }

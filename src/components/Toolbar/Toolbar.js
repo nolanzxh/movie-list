@@ -28,6 +28,7 @@ export class Toolbar extends React.Component {
 
         return (
             <div className="category_filter" >
+                <span id='category'>CATEGORY :&nbsp;&nbsp;</span>
                 {
                     categoriesArr.map((el) =>
                         <FormControlLabel

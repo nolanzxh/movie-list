@@ -2,17 +2,24 @@ export function rootReducer(state, action) {
     let movieId = null;
     let categorySelected = null;
     let newMovies = [];
+    let newCategories = [];
 
     switch (action.type) {
         case 'SET_MOVIES':
             return { ...state, movies: action.payload }
         case 'DELETE_MOVIE':
             movieId = action.payload
+            let movieCategory = null;
             state.movies.forEach(element => {
                 if (element.id !== movieId)
                     newMovies.push(element)
+                else
+                    movieCategory = element.category
             })
-            return { ...state, movies: newMovies }
+            newCategories = state.categoriesSelected.slice()
+            if (movieCategory !== null && newMovies.filter(el => el.category === movieCategory).length === 0)
+                newCategories.splice(state.categoriesSelected.indexOf(movieCategory), 1)
+            return { ...state, movies: newMovies, categoriesSelected: newCategories }
         case 'LIKE_MOVIE':
             movieId = action.payload;
             state.movies.forEach(element => {
@@ -48,7 +55,7 @@ export function rootReducer(state, action) {
             if (state.categoriesSelected.indexOf(categorySelected) === -1)
                 return { ...state, categoriesSelected: [...state.categoriesSelected, categorySelected] }
             else {
-                let newCategories = state.categoriesSelected.slice()
+                newCategories = state.categoriesSelected.slice()
                 newCategories.splice(state.categoriesSelected.indexOf(categorySelected), 1)
                 return { ...state, categoriesSelected: newCategories }
             }
